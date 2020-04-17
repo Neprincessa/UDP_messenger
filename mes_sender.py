@@ -1,7 +1,7 @@
 import socket
 
 UDP_IP_DST = "224.1.1.1"
-MULTICAST_TTL = 2 
+MULTICAST_TTL = 1 
 MULTICAST = 'multicast'
 BROADCAST = 'broadcast'
 UNICAST = 'unicast'
