@@ -1,3 +1,4 @@
+from common import safe_input
 import socket
 
 UDP_IP_DST = "224.1.1.1"
@@ -7,16 +8,6 @@ BROADCAST = 'broadcast'
 UNICAST = 'unicast'
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
-
-def safe_input(number, functype='port'):
-    if functype == 'loop_back':
-        while not number.isdigit() or int(number) < 0 or int(number) > 1:
-            number = input("Enter number once again:")
-    else:
-        while not number.isdigit() or int(number) < 0:
-            number = input("Enter number once again: ")
-    return int(number)
-
 
 def send(mode):
     if mode == BROADCAST:

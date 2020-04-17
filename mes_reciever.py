@@ -1,4 +1,4 @@
-from mes_sender import safe_input
+from common import safe_input
 import socket 
 import struct
 
